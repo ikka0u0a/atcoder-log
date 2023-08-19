@@ -1,15 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define rep(i, n) for (int i = 0; i < (int)(n); i++)
+using ull = unsigned long long;
 
 int main() {
   int N = 64;
-  unsigned long long ans = 0;
+  ull ans = 0;
   rep(i,N){
-    int a;
+    ull a;
     cin >> a;
-    unsigned long long c = (a * pow(2,i));
-    ans += c;
+    ans += a * ull (pow(2,i));
   }
   cout << ans << endl;
 }
