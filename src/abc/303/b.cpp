@@ -5,7 +5,7 @@ using namespace std;
 int main() {
   int N,M;
   cin >> N >> M;
-  vector<vector<string>> A(N, vector<string>(M));
+  vector<vector<string>> A(M, vector<string>(N));
   rep(i, M) rep(j, N) cin >> A[i][j];
   set <string> S;
   rep(i, M) rep(j, N - 1) {
