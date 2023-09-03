@@ -36,19 +36,13 @@ int main() {
   vector<vector<int>> B(N,vector<int>(N));
   rep(i, N) rep(j, N) cin >> A[i][j];
   rep(i, N) rep(j, N) cin >> B[i][j];
-  if(isOverlap(A,B)) { 
-    cout << "Yes" << endl;
-    return 0;
-  }
-  rep(i, 3) {
-    //cout << i + 1 << ":" << endl;
-    if(isOverlap(A,B)) { 
-      cout << "Yes" << endl;
-      return 0;
-    }
-    rotate(A);
-    //disp(A);
-  }
-  cout << "No" << endl;
+  rep(i,4) {
+		if (isOverlap(A,B)) {
+			cout << "Yes" << endl;
+			return 0;
+		}
+		rotate(A);
+	}
+	cout << "No" << endl;
   return 0;
 }
